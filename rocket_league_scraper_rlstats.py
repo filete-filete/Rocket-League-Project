@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import requests, bs4
 import datetime
 
@@ -80,6 +78,7 @@ get_stats(platform, name)
 #     get_stats(platform, name)
 #     time += -step
 #     sleep(step) 
+
 
 
 
