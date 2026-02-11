@@ -16,7 +16,7 @@ def get_html(platform,name):
 def get_stats(platform, name):
     
     # open file:
-    file = open(r"C:\Users\felix\Downloads\rlstats.txt","a", encoding="utf-8")
+    file = open(r"\.\rlstats.txt","a", encoding="utf-8")
     # print name, platform, date and time
     file.write(name+", "+platform+", ")
     now = datetime.datetime.now()
