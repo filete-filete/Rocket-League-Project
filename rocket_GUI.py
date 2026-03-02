@@ -1,9 +1,13 @@
+import sys
 import time
 import threading
 import tkinter as tk
 import winsound
 
-import rocket_league_project.rocket_scraper as scraper
+
+sys.path.append(r"C:\Users\felix\rocket_league_project")
+import rocket_scraper as scraper
+
 
 # =============================================================================
 # FUNCTION DEFINITIONS REGARDING START AND STOP BUTTONS
