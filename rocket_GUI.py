@@ -6,7 +6,11 @@ import winsound
 
 
 sys.path.append(r"C:\Users\felix\rocket_league_project")
+# import rocket_league_project
+# from rocket_league_project import rocket_scraper as scraper
+
 import rocket_scraper as scraper
+import rocket_graph as graph
 
 
 # =============================================================================
@@ -53,7 +57,7 @@ root = tk.Tk() # creates the window
 
 # What follows are the widgets
 
-label = tk.Label(root, text = "Rocket League Project").grid(row = 0, column = 0)
+label = tk.Label(root, text = "Rocket League Project").grid(row = 0, columnspan=2)
 
 tk.Label(root, text="Username: ").grid(row=1, column=0)
 tk.Label(root, text="Platform: ").grid(row=2, column=0)
@@ -70,13 +74,18 @@ var2 = tk.IntVar()
 tk.Checkbutton(root, text="Overtime", variable=var1).grid(row=3, column = 0)
 tk.Checkbutton(root, text="Forfeit", variable=var2).grid(row=3, column = 1)
 
-button_s = tk.Button(root, text="START", padx=30, pady=20, bg = "#93fa8c", command = lambda platform = "Epic", username = "filete_filete": start_session(platform, username))
+button_s = tk.Button(root, text="START", width = 15, height = 2, bg = "#93fa8c", command = lambda platform = "Epic", username = "filete_filete": start_session(platform, username))
 button_s.grid(row = 4, column= 0)
 
-button_s = tk.Button(root, text = "STOP", padx=30, pady=20, bg = "#fa8c8c", command = end_session)
+button_s = tk.Button(root, text = "STOP", width = 15, height = 2, bg = "#fa8c8c", command = end_session)
 button_s.grid(row = 4, column = 1)
 
-text = tk.Text(root, height = 10, width = 28)
-text.grid(row = 5, columnspan = 2)
+button_g = tk.Button(root, text = "GRAPH 2v2mmr", width = 15, height = 2, command = graph.ranked2v2)
+button_g.grid(row = 5, column = 0)
+
+label = tk.Label(root, text = "What is going on...").grid(row = 6, columnspan=2)
+
+text = tk.Text(root, height = 3, width = 28)
+text.grid(row = 7, columnspan = 2)
 
 root.mainloop() # starts the event loop and keeps the window responsive

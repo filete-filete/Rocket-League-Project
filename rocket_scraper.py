@@ -57,8 +57,3 @@ def get_stats(platform, username):
 
 
 
-
-
-
-
-
