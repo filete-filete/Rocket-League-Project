@@ -10,7 +10,7 @@ def ranked2v2():
     # obtain unduplicated data for 2v2 ranked games
     ranked2v2_data_unduplicated = rocket_data.drop_duplicates(subset = "2v2matches")
     ranked2v2_series = pd.Series(ranked2v2_data_unduplicated["2v2mmr"]).reset_index(drop = True)
-    
+
     # print a lineplot
     plt.figure(figsize = (8,5))
     sns.lineplot(data = ranked2v2_series, marker = "o", label = "Ranked 2v2 MMR")
